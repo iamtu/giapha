@@ -352,6 +352,7 @@
 
     <div class="sidebar">
         <h2>Quản Lý Gia Phả</h2>
+        <div id="total-count" style="font-size:14px; color:#555; margin-top:6px;">Tổng thành viên: 0</div>
         
         <div id="root-actions" style="display: none;">
             <h3>Khởi Tạo Gia Phả</h3>
@@ -491,6 +492,8 @@
                         document.getElementById('root-actions').style.display = 'block';
                     });
             }
+            // Auto-hide left sidebar on initial page load
+            document.body.classList.add('sidebar-collapsed');
             updateSidebarToggleButton();
             initPanZoomListeners(); // Kích hoạt bộ lắng nghe sự kiện kéo thả chuột
         }
@@ -536,6 +539,29 @@
 
         function saveToStorage() {
             localStorage.setItem('family_tree_data', JSON.stringify(familyData));
+        }
+
+        function countPersons(root) {
+            if (!root) return 0;
+            const seen = new Set();
+            function traverse(node) {
+                if (!node) return;
+                if (node.id) seen.add(node.id);
+                if (node.spouses && node.spouses.length) {
+                    node.spouses.forEach(s => { if (s && s.id) seen.add(s.id); });
+                }
+                if (node.children && node.children.length) {
+                    node.children.forEach(c => traverse(c));
+                }
+            }
+            traverse(root);
+            return seen.size;
+        }
+
+        function updateTotalCount() {
+            const el = document.getElementById('total-count');
+            const count = familyData ? countPersons(familyData) : 0;
+            if (el) el.innerText = `Tổng thành viên: ${count}`;
         }
 
         // QUẢN LÝ TÍNH NĂNG ZOOM & PAN (KÉO THẢ)
@@ -1003,11 +1029,13 @@
                 container.innerHTML = '';
                 document.getElementById('root-actions').style.display = 'block';
                 document.getElementById('member-actions').style.display = 'none';
+                updateTotalCount();
                 return;
             }
             container.innerHTML = `<ul>${createTreeHTML(familyData)}</ul>`;
             applyTransform(); // Giữ nguyên tọa độ dịch chuyển và tỉ lệ thu phóng sau khi render lại dữ liệu
             if (selectedNodeId) selectMember(selectedNodeId);
+            updateTotalCount();
         }
 
         // XUẤT FILE JSON

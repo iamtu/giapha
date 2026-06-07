@@ -1723,23 +1723,12 @@
                   "children": []
                 },
                 {
-                  "id": "_fu8ysvi10",
-                  "name": "Trịnh Thị Lương",
-                  "gender": "Nữ",
-                  "birthYear": "",
-                  "deathYear": "Đang sống",
-                  "birthOrder": 4,
-                  "spouseParentId": "",
-                  "spouses": [],
-                  "children": []
-                },
-                {
                   "id": "_1bsrvc5s0",
                   "name": "Trịnh Cường",
                   "gender": "Nam",
                   "birthYear": "1959",
                   "deathYear": "Đang sống",
-                  "birthOrder": 5,
+                  "birthOrder": 4,
                   "spouseParentId": "",
                   "spouses": [],
                   "children": [
@@ -1789,6 +1778,17 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "id": "_fu8ysvi10",
+                  "name": "Trịnh Thị Lương",
+                  "gender": "Nữ",
+                  "birthYear": "",
+                  "deathYear": "Đang sống",
+                  "birthOrder": 5,
+                  "spouseParentId": "",
+                  "spouses": [],
+                  "children": []
                 },
                 {
                   "id": "_wuda5yb53",
@@ -1943,7 +1943,7 @@
                   "id": "_chlt6k0ln",
                   "name": "Trịnh Thị Ái",
                   "gender": "Nữ",
-                  "birthYear": "1937",
+                  "birthYear": "1935",
                   "deathYear": "Đang sống",
                   "birthOrder": 2,
                   "spouseParentId": "",
@@ -1956,10 +1956,10 @@
               "id": "_2w8j95mx5",
               "name": "Trịnh Tý",
               "gender": "Nam",
-              "birthYear": "",
-              "deathYear": "Đang sống",
+              "birthYear": "1925",
+              "deathYear": "1988",
               "birthOrder": 3,
-              "spouseParentId": "_wlqqnh3ar",
+              "spouseParentId": "",
               "spouses": [],
               "children": [
                 {
@@ -2316,7 +2316,7 @@
                 },
                 {
                   "id": "_bnopj0kp3",
-                  "name": "trịnh Thị Hoa",
+                  "name": "Trịnh Thị Hoa",
                   "gender": "Nữ",
                   "birthYear": "1963",
                   "deathYear": "Đang sống",
@@ -2649,25 +2649,300 @@
     },
     {
       "id": "_rjtn273yv",
-      "name": "Trịnh Châu Bạ",
+      "name": "Trịnh Châu Bạ (Cố chùa)",
       "gender": "Nam",
       "birthYear": "",
       "deathYear": "Đang sống",
       "birthOrder": 3,
       "spouseParentId": "_wlqqnh3ar",
       "spouses": [],
-      "children": []
-    },
-    {
-      "id": "_l40wb5zj9",
-      "name": "Trinh ...........",
-      "gender": "Nữ",
-      "birthYear": "",
-      "deathYear": "Đang sống",
-      "birthOrder": 4,
-      "spouseParentId": "",
-      "spouses": [],
-      "children": []
+      "children": [
+        {
+          "id": "_f8n9z0zud",
+          "name": "Trịnh Phong",
+          "gender": "Nam",
+          "birthYear": "",
+          "deathYear": "Đang sống",
+          "birthOrder": 1,
+          "spouseParentId": "_wlqqnh3ar",
+          "spouses": [],
+          "children": [
+            {
+              "id": "_q0jpn7jnk",
+              "name": "Trịnh Dặn",
+              "gender": "Nam",
+              "birthYear": "",
+              "deathYear": "Đang sống",
+              "birthOrder": 1,
+              "spouseParentId": "_wlqqnh3ar",
+              "spouses": [],
+              "children": [
+                {
+                  "id": "_omatgorh8",
+                  "name": "Trịnh Phơn",
+                  "gender": "Nam",
+                  "birthYear": "",
+                  "deathYear": "Đang sống",
+                  "birthOrder": 1,
+                  "spouseParentId": "_wlqqnh3ar",
+                  "spouses": [],
+                  "children": [
+                    {
+                      "id": "_624hvbi4g",
+                      "name": "Trịnh Mạnh",
+                      "gender": "Nam",
+                      "birthYear": "",
+                      "deathYear": "Đang sống",
+                      "birthOrder": 1,
+                      "spouseParentId": "_wlqqnh3ar",
+                      "spouses": [],
+                      "children": []
+                    },
+                    {
+                      "id": "_reaku0g7z",
+                      "name": "Trịnh Tùng",
+                      "gender": "Nam",
+                      "birthYear": "",
+                      "deathYear": "Đang sống",
+                      "birthOrder": 2,
+                      "spouseParentId": "_wlqqnh3ar",
+                      "spouses": [],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "_z7m8s87nd",
+                  "name": "Trịnh Lâm",
+                  "gender": "Nam",
+                  "birthYear": "",
+                  "deathYear": "Đang sống",
+                  "birthOrder": 2,
+                  "spouseParentId": "_wlqqnh3ar",
+                  "spouses": [],
+                  "children": [
+                    {
+                      "id": "_jqdxlpoa1",
+                      "name": "Trịnh Luân",
+                      "gender": "Nam",
+                      "birthYear": "",
+                      "deathYear": "Đang sống",
+                      "birthOrder": 1,
+                      "spouseParentId": "_wlqqnh3ar",
+                      "spouses": [],
+                      "children": []
+                    },
+                    {
+                      "id": "_3vpb62fzs",
+                      "name": "Trịnh Anh",
+                      "gender": "Nam",
+                      "birthYear": "",
+                      "deathYear": "Đang sống",
+                      "birthOrder": 2,
+                      "spouseParentId": "_wlqqnh3ar",
+                      "spouses": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "_lnpfs7v9t",
+              "name": "Trịnh Thiềm",
+              "gender": "Nam",
+              "birthYear": "",
+              "deathYear": "Đang sống",
+              "birthOrder": 2,
+              "spouseParentId": "_wlqqnh3ar",
+              "spouses": [],
+              "children": [
+                {
+                  "id": "_knot8nw13",
+                  "name": "Trịnh Cung",
+                  "gender": "Nam",
+                  "birthYear": "",
+                  "deathYear": "Đang sống",
+                  "birthOrder": 1,
+                  "spouseParentId": "",
+                  "spouses": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "_jfeqfd269",
+              "name": "Trịnh Kỳ",
+              "gender": "Nam",
+              "birthYear": "",
+              "deathYear": "Đang sống",
+              "birthOrder": 3,
+              "spouseParentId": "_wlqqnh3ar",
+              "spouses": [],
+              "children": [
+                {
+                  "id": "_q2dq7xbrp",
+                  "name": "Trịnh Long",
+                  "gender": "Nam",
+                  "birthYear": "",
+                  "deathYear": "Đang sống",
+                  "birthOrder": 1,
+                  "spouseParentId": "",
+                  "spouses": [],
+                  "children": []
+                },
+                {
+                  "id": "_cca9vzfd2",
+                  "name": "Trịnh Hùng",
+                  "gender": "Nam",
+                  "birthYear": "",
+                  "deathYear": "Đang sống",
+                  "birthOrder": 2,
+                  "spouseParentId": "",
+                  "spouses": [],
+                  "children": []
+                },
+                {
+                  "id": "_wh9sft7a6",
+                  "name": "Trịnh Cường",
+                  "gender": "Nam",
+                  "birthYear": "",
+                  "deathYear": "Đang sống",
+                  "birthOrder": 3,
+                  "spouseParentId": "",
+                  "spouses": [],
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "_wn63zx34o",
+              "name": "Trịnh Sáu",
+              "gender": "Nam",
+              "birthYear": "",
+              "deathYear": "Đang sống",
+              "birthOrder": 4,
+              "spouseParentId": "_wlqqnh3ar",
+              "spouses": [],
+              "children": [
+                {
+                  "id": "_quiekbrj0",
+                  "name": "Trịnh Thành",
+                  "gender": "Nam",
+                  "birthYear": "",
+                  "deathYear": "Đang sống",
+                  "birthOrder": 1,
+                  "spouseParentId": "",
+                  "spouses": [],
+                  "children": []
+                },
+                {
+                  "id": "_u1ncvihkv",
+                  "name": "Trịnh Bình",
+                  "gender": "Nam",
+                  "birthYear": "",
+                  "deathYear": "Đang sống",
+                  "birthOrder": 2,
+                  "spouseParentId": "",
+                  "spouses": [],
+                  "children": []
+                },
+                {
+                  "id": "_ajfauutpw",
+                  "name": "Trịnh Tùng",
+                  "gender": "Nam",
+                  "birthYear": "",
+                  "deathYear": "Đang sống",
+                  "birthOrder": 3,
+                  "spouseParentId": "",
+                  "spouses": [],
+                  "children": [
+                    {
+                      "id": "_ruy2tllb1",
+                      "name": "Trịnh Tuấn",
+                      "gender": "Nam",
+                      "birthYear": "",
+                      "deathYear": "Đang sống",
+                      "birthOrder": 1,
+                      "spouseParentId": "",
+                      "spouses": [],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "_dbomrn6jq",
+              "name": "Trịnh Xất",
+              "gender": "Nam",
+              "birthYear": "",
+              "deathYear": "Đang sống",
+              "birthOrder": 5,
+              "spouseParentId": "_wlqqnh3ar",
+              "spouses": [],
+              "children": [
+                {
+                  "id": "_eary025q8",
+                  "name": "Trịnh Định",
+                  "gender": "Nam",
+                  "birthYear": "",
+                  "deathYear": "Đang sống",
+                  "birthOrder": 1,
+                  "spouseParentId": "",
+                  "spouses": [],
+                  "children": []
+                },
+                {
+                  "id": "_40ywwougf",
+                  "name": "Trịnh Thanh",
+                  "gender": "Nam",
+                  "birthYear": "",
+                  "deathYear": "Đang sống",
+                  "birthOrder": 2,
+                  "spouseParentId": "",
+                  "spouses": [],
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "_gkc5fsp7v",
+          "name": "Trịnh Nghỉ",
+          "gender": "Nam",
+          "birthYear": "",
+          "deathYear": "Đang sống",
+          "birthOrder": 2,
+          "spouseParentId": "_wlqqnh3ar",
+          "spouses": [],
+          "children": [
+            {
+              "id": "_sg6w0is75",
+              "name": "Trịnh Mão",
+              "gender": "Nam",
+              "birthYear": "",
+              "deathYear": "Đang sống",
+              "birthOrder": 1,
+              "spouseParentId": "_wlqqnh3ar",
+              "spouses": [],
+              "children": []
+            },
+            {
+              "id": "_vgkti4zyv",
+              "name": "Trịnh Ngọ",
+              "gender": "Nam",
+              "birthYear": "",
+              "deathYear": "Đang sống",
+              "birthOrder": 2,
+              "spouseParentId": "_wlqqnh3ar",
+              "spouses": [],
+              "children": []
+            }
+          ]
+        }
+      ]
     }
   ]
 }
