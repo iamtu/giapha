@@ -8,6 +8,8 @@ let familyData = null;
         let isDragging = false;
         let startX = 0;
         let startY = 0;
+        let pinchStartDistance = null;
+        let initialScaleForPinch = null;
         let prePrintState = null;
 
         function init() {
@@ -157,6 +159,71 @@ let familyData = null;
                 }
                 applyTransform();
             }, { passive: false });
+
+            // Touch events: support one-finger pan and two-finger pinch-to-zoom
+            function getTouchDistance(t1, t2) {
+                const dx = t2.clientX - t1.clientX;
+                const dy = t2.clientY - t1.clientY;
+                return Math.hypot(dx, dy);
+            }
+
+            container.addEventListener('touchstart', (e) => {
+                if (document.body.classList.contains('print-mode')) return;
+                if (!e.touches || e.touches.length === 0) return;
+
+                // If the touch is on an interactive element (buttons, links, inputs, sidebar toggle, zoom controls, cards, or sidebar), don't start pan
+                const target = e.target;
+                if (target && target.closest) {
+                    const interactive = target.closest('button, a, input, select, textarea, .sidebar-toggle, .sidebar, .zoom-controls, .card');
+                    if (interactive) return;
+                }
+
+                if (e.touches.length === 1) {
+                    isDragging = true;
+                    startX = e.touches[0].clientX - panX;
+                    startY = e.touches[0].clientY - panY;
+                    e.preventDefault();
+                } else if (e.touches.length === 2) {
+                    // Begin pinch
+                    pinchStartDistance = getTouchDistance(e.touches[0], e.touches[1]);
+                    initialScaleForPinch = scale;
+                    e.preventDefault();
+                }
+            }, { passive: false });
+
+            container.addEventListener('touchmove', (e) => {
+                if (document.body.classList.contains('print-mode')) return;
+                if (!e.touches || e.touches.length === 0) return;
+
+                if (e.touches.length === 1 && isDragging) {
+                    panX = e.touches[0].clientX - startX;
+                    panY = e.touches[0].clientY - startY;
+                    applyTransform();
+                    e.preventDefault();
+                } else if (e.touches.length === 2 && pinchStartDistance) {
+                    const newDist = getTouchDistance(e.touches[0], e.touches[1]);
+                    const ratio = newDist / pinchStartDistance;
+                    scale = Math.max(0.15, Math.min(initialScaleForPinch * ratio, 3));
+                    applyTransform();
+                    e.preventDefault();
+                }
+            }, { passive: false });
+
+            container.addEventListener('touchend', (e) => {
+                // When fingers lifted, reset states appropriately
+                if (!e.touches || e.touches.length === 0) {
+                    isDragging = false;
+                    pinchStartDistance = null;
+                    initialScaleForPinch = null;
+                } else if (e.touches.length === 1) {
+                    // If one finger remains after pinch, allow continued pan
+                    isDragging = true;
+                    startX = e.touches[0].clientX - panX;
+                    startY = e.touches[0].clientY - panY;
+                    pinchStartDistance = null;
+                    initialScaleForPinch = null;
+                }
+            });
         }
 
         function applyTransform() {

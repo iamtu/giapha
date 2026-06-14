@@ -47,6 +47,8 @@
             background-size: 20px 20px;
             cursor: grab; /* Con trỏ bàn tay nắm */
             user-select: none; /* Tránh bôi đen chữ khi đang kéo thả */
+            touch-action: none; /* Allow custom touch gestures (pan/pinch) */
+            -ms-touch-action: none; /* For older IE */
         }
         
         .tree-container:active {
@@ -332,6 +334,20 @@
                 display: none !important;
             }
 
+        
+            /* Responsive adjustments */
+            @media (max-width: 1000px) {
+                .sidebar { width: 300px; }
+                .card { min-width: 130px; max-width: 160px; }
+            }
+
+            @media (max-width: 700px) {
+                body.sidebar-collapsed .sidebar { display: none; }
+                .sidebar { position: absolute; left: 0; top: 0; height: 100vh; z-index: 130; width: 280px; }
+                .tree-container { padding: 8px; }
+                .card { min-width: 120px; max-width: 150px; font-size: 13px; }
+                .zoom-controls { right: 12px; bottom: 12px; }
+                .sidebar-toggle { top: 10px; left: 10px; }
             .tree-container {
                 width: 100vw !important;
                 height: 100vh !important;
